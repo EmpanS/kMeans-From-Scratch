@@ -5,8 +5,8 @@ This is just-for-fun project where I've implemented the k-means algorithm from s
 
 ## Content
 This project contains three files:
-1. Conda environment (.yml file): [kMeans.yml](https://github.com/EmpanS/kMeans-From-Scratch/blob/master/kMeans.yml)
-2. The Class kMeans (.py file), contains the k-means algorithm: [kMeans.py](https://github.com/EmpanS/ML-from-Scratch/blob/master/kMeans.py)
+1. Conda environment (.yml file): [KMeans.yml](https://github.com/EmpanS/kMeans-From-Scratch/blob/master/kMeans.yml)
+2. The Class KMeans (.py file), contains the k-means algorithm: [kMeans.py](https://github.com/EmpanS/ML-from-Scratch/blob/master/kMeans.py)
 3. An example notebook, containing two toy examples on how to use the class: [example.ipynb](https://github.com/EmpanS/ML-from-Scratch/blob/master/example.ipynb)
 
 ## How to use
@@ -23,13 +23,13 @@ $ conda activate kMeans
 
 Example:
 ```python
-from kMeans import kMeans
+from kMeans import KMeans
 ```
 
 Create a (m x n)-numpy array called data containing the data to cluster. Then, create and fit a model (instance of the class).
 
 ```python
-model = kMeans(k=3, X=data)
+model = KMeans(k=3, X=data)
 wss, predictions = model.fit()
 ```
 
