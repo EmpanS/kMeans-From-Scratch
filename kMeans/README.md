@@ -1,7 +1,7 @@
 # kMeans
 
 ### A numpy implementation of the k-means algorithm.
-This is just-for-fun project where I implemented the k-means algorithm from scratch using numpy. A time back, I decided to start implementing machine learning algorithms from scratch to get a better understanding about how they work.
+This is just-for-fun project where I implemented the k-means algorithm from scratch using numpy. Some time back, I decided to start implementing machine learning algorithms from scratch to get a better understanding about how they work.
 
 
 ## Content
