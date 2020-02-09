@@ -13,12 +13,12 @@ This project contains three files:
 ## How to use
 1. Clone the repository.
 2. Create the conda enviroment from the environment file called kMeans.yml by running:
-```python
-$ conda env create -f kMeans.yml
+```cmd
+conda env create -f kMeans.yml
 ```
 3. Then activate the enviornment:
 ```python
-$ conda activate kMeans
+\$ conda activate kMeans
 ```
 4. Now, you can either go through the example iPython notebook or play with the kMeans class by simply importing the class. Example:
 ```python
@@ -30,7 +30,7 @@ wss, predictions = model.fit()
 
 ## Further Improvements
 These are my ideas for further improvements and possible extensions:
-- Better error handling, there iscurrently a limited error handling in the class.
+- Better error handling, there current error handling functionality is limited.
 - Extended features, more methods to extract data from an instance of a class.
 - Create a method for hyper-parameter optimization. Could include creation of a Scree-plot and Silhouette-functionality. 
 
