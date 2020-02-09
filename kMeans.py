@@ -1,17 +1,20 @@
 # Import useful libraries
 import numpy as np
 
+class KMeans:
+    AVAILABLE_DIST_F = ["L1_norm", "L2_norm"]
 
-class kMeans:
     """A class used to perform the k-means clustering algorithm on a data set. The maximum number of
      iterations is set by the user, if it converges to a solution, it stops iterating. 
-    
-    Attributes
+
+    Constants
     ----------
     AVAILABLE_DIST_F : (list of str)
         Contains the available distance functions. L1_norm is the Manhattan distance, L2_norm is the
         ordinary Euclidean distance.
     
+    Attributes
+    ----------
     k : (int)
         Represents the number of clusters
         
@@ -42,16 +45,15 @@ class kMeans:
     fit(self, X=None)
         Performs the k-means algorithm on the passed data X or, if no data is passed, on self.X 
         
-    __calculate_distances(X, centers)
+    _calculate_distances(X, centers)
         Calculates the distances between all observations in X and all centers of clusters. Uses the
         distance function already specified as a hyper-parameter.    
         
-    __validate_param(h_param, setting)
+    _validate_param(h_param, setting)
         Validate new hyper-parameter settings.
     """
     
     def __init__(self, k, X, verbose=True, h_params=None, random_state=None):
-        self.AVAILABLE_DIST_F = ["L1_norm", "L2_norm"]
         self.k = k
         self.X = X
         self.verbose = verbose
@@ -80,7 +82,7 @@ class kMeans:
         if type(h_params) != dict:
             raise TypeError('The argument must be a dictionary.')
         for h_param, setting in h_params.items():
-            self.__validate_param(h_param, setting)
+            self._validate_param(h_param, setting)
             self.h_params[h_param] = setting 
             
     def fit(self, X=None):
@@ -121,7 +123,7 @@ class kMeans:
 
         for iter in range(self.h_params['n_iter']):
             # Label the observations using the updated cluster centers
-            distances  = self.__calculate_distances(X, cluster_centers)
+            distances  = self._calculate_distances(X, cluster_centers)
             labels = np.argmin(distances, axis=1)
 
             # Calculate the within-sum-of-squares
@@ -143,7 +145,7 @@ class kMeans:
             print(f"Did not converged, reached max iterations. Completed {iter+1} iterations.")
         return(wss[0,:], labels)        
             
-    def __calculate_distances(self, X, centers):
+    def _calculate_distances(self, X, centers):
         """
         Calculates the distances between all observations in X and all cluster centers. The already
         specified distance function (found in self.h_params) is used to calculate the distances.
@@ -189,7 +191,7 @@ class kMeans:
         else:
             raise ValueError('Could not calculate distance, no distance function found.')
     
-    def __validate_param(self, h_param, setting):
+    def _validate_param(self, h_param, setting):
         """
         Validates a given hyper-parameter update. The update must must have a valid key and value.
         
@@ -205,7 +207,7 @@ class kMeans:
         -------
         None - (Throws an error if not valid.)
         """
-        
+
         if h_param not in self.h_params.keys():
             raise KeyError("No hyper parameter is named " + str(h_param) + ", it is a wrong value of key. Must be either 'n_iter' or 'dist_f'.")
 
