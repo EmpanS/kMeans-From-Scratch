@@ -15,7 +15,7 @@ This project contains three files:
 ```console
 $ conda env create -f kMeans.yml
 ```
-3. Then activate the enviornment:
+3. Then activate the enviroment:
 ```console
 $ conda activate kMeans
 ```
