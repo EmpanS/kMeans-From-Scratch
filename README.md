@@ -13,7 +13,7 @@ This project contains three files:
 ## How to use
 1. Clone the repository.
 2. Create the conda enviroment from the environment file called kMeans.yml by running:
-```cmd
+```console
 conda env create -f kMeans.yml
 ```
 3. Then activate the enviornment:
