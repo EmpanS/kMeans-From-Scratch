@@ -20,10 +20,16 @@ $ conda env create -f kMeans.yml
 ```console
 $ conda activate kMeans
 ```
-4. Now, you can either go through the example iPython notebook or play with the kMeans class by simply importing the class. Example:
+4. Now, you can either go through the example iPython notebook or play with the kMeans class by simply importing the class. 
+
+Example:
 ```python
 from kMeans import kMeans
+```
 
+Create a (m x n)-numpy array called data containing the data to cluster. Then, create and fit a model (instance of the class).
+
+```python
 model = kMeans(k=3, X=data)
 wss, predictions = model.fit()
 ```
