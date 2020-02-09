@@ -17,8 +17,8 @@ This project contains three files:
 $ conda env create -f kMeans.yml
 ```
 3. Then activate the enviornment:
-```python
-\$ conda activate kMeans
+```console
+$ conda activate kMeans
 ```
 4. Now, you can either go through the example iPython notebook or play with the kMeans class by simply importing the class. Example:
 ```python
