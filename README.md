@@ -14,7 +14,7 @@ This project contains three files:
 1. Clone the repository.
 2. Create the conda enviroment from the environment file called kMeans.yml by running:
 ```console
-conda env create -f kMeans.yml
+$ conda env create -f kMeans.yml
 ```
 3. Then activate the enviornment:
 ```python
