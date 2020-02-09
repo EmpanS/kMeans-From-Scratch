@@ -1,6 +1,6 @@
 # Machine Learning Algorithms from Scratch
 
-This is just-for-fun project where I implement differnet machine learning algorithms from scratch. A while ago, I decided to start implementing machine learning algorithms from scratch to get a better understanding of how they work. See each specific folder for how to run the algorithms.
+This is just-for-fun project where I implement different machine learning algorithms from scratch. A while ago, I decided to start implementing machine learning algorithms to get a better understanding of how they work. See each specific folder for how to run the algorithms.
 
 ## Content
 This project currently contains the following:
